@@ -30,6 +30,12 @@ namespace LibraryManager.Controllers
             return this.BookService.GetBookDetails(id);
         }
 
+        [Route("search/{key}")]
+        public IEnumerable<Book> GetBooksBySearchKey(string key)
+        {
+            return this.BookService.GetBooksBySearchKey(key);
+        }
+
         [Route("add")]
         public int PostBook(Book book)
         {

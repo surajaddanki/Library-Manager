@@ -10,6 +10,8 @@ namespace LibraryManager.Service.Services
 
         Book GetBookDetails(int id);
 
+        IEnumerable<Book> GetBooksBySearchKey(string key);
+
         bool UpdateBookDetails(int id, Book book);
 
         int AddBook(Book book);
